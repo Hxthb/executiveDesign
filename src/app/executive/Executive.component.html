@@ -1,0 +1,91 @@
+<section class="containers">
+    <cy-nav [headerTitle]="navTitle" cy-theme></cy-nav>
+    <article class="ContentBody">
+        <section class="panel-heading">
+            <header class="">
+                <section class="panel-title">
+                    <section class="tools btn-group row">
+                        <button class="btn btn-info " title="新增绑定">{{ 'executive.add' | translate}}</button>
+                        <button class="btn btn-info" title="帮助文档" (click)="openHelpDocument(HelpDocument)">{{ 'executive.help' | translate}}</button>
+                        <button class="btn btn-info" title="提交" (click)='save(showJsonModal)'>{{ 'executive.upload' | translate}}</button>
+                    </section>
+                </section>
+            </header>
+        </section>
+        <article class="panel-body rule-body ">
+            <section>
+                <section class="ExecuteHeader Listtitle">{{ 'executive.menu_left' | translate}}</section>
+                <section class="ExecuteHeader placetitle">{{'executive.menu_right' | translate}}</section>
+            </section>
+            <!--左侧菜单-->
+            <section class="left-key-nav LeftBloak ">
+                <ul class="left-menu-list">
+                    <li [class.left-menu-selected]="'Dispose' === selectedModule" (click)="onSelect('Dispose')">
+                        {{ 'executive.nav_logic' | translate}}
+                    </li>
+                    <li [class.left-menu-selected]="'Event' === selectedModule" (click)="onSelect('Event')">
+                        {{ 'executive.nav_event' | translate}}
+                    </li>
+                    <li [class.left-menu-selected]="'Data' === selectedModule" (click)="onSelect('Data')">
+                        {{ 'executive.nav_data' | translate}}
+                    </li>
+                    <li [class.left-menu-selected]="'Expand' === selectedModule" (click)="onSelect('Expand')">
+                        {{ 'executive.nav_more' | translate}}
+                    </li>
+                </ul>
+            </section>
+            <!--左侧菜单列表-->
+            <section class="page-manage-wrap LeftBloak">
+                <section class="ctrl-lib-wrap">
+                    <section [ngSwitch]="list">
+                        <!-- 自定义变量模块 -->
+                        <section *ngSwitchCase="'Data'">
+                            <rule-dataCons [NewVarArray]='NewVarArray'></rule-dataCons>
+                        </section>
+                        <!-- 处理模块 -->
+                        <section *ngSwitchCase="'Event'">
+                            <rule-eventCons></rule-eventCons>
+                        </section>
+                        <!-- 函数体模块 -->
+                        <section *ngSwitchCase="'Dispose'">
+                            <rule-disposeCons></rule-disposeCons>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <!--拖拽菜单-->
+            <section class="droppable-page LeftBloak ui-sortable">
+                <div class="droppable ui-sortable">
+                </div>
+            </section>
+        </article>
+    </article>
+</section>
+<section class="showJson modal fade" #showJsonModal>
+    <section class="modal-dialog">
+        <section class="modal-content">
+            <section class="modal-header">
+                保存执行体设计json（测试）
+            </section>
+            <section class="modal-body">
+                <pre>{{designJson || "未拖拽控件"}}</pre>
+            </section>
+            <section class="modal-footer">
+                <button type="button" class="btn btn-info" (click)='exeSubmit()' [disabled]='isDisable'>提交</button>
+                <button type="button" class="btn btn-info" (click)="exeReturn(showJsonModal)">返回</button>
+            </section>
+        </section>
+    </section>
+</section>
+<section class="showJson modal fade" #showHelpModal>
+    <section class="modal-dialog">
+        <section class="modal-content">
+            <section class="modal-header">
+                帮助文档
+            </section>
+            <section class="modal-body">
+                <pre>该设计器主要用于设计存储过程内常见逻辑关系，操作方式类似<a href="https://scratch.mit.edu/">Scratch</a></pre>
+            </section>
+        </section>
+    </section>
+</section>

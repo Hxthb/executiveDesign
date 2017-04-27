@@ -1,0 +1,33 @@
+/*全局css样式-蓝色调主题*/
+@charset "UTF-8";
+@import "../../../scssLib/_mixin.scss";
+@import "../../../scssLib/_value.scss";
+
+.btnNormal{
+	color:#fff;
+    background-color: $COLOR_BLUE;
+    &:hover{
+        color:#fff;
+        @include setGradientBg($COLOR_BLUE,135deg);
+    }
+}
+
+.modal{
+	.modal-dialog{
+		.modal-content{
+			.modal-header{
+				@include setGradientBg($COLOR_BLUE,135deg);
+			}
+		}
+	}
+}
+
+.navbar{
+    @include setGradientBg_Smooth($COLOR_BLUE,135deg);
+}
+
+.panel{
+	.panel-heading{
+		@include setGradientBg($COLOR_BLUE,135deg);
+	}
+}

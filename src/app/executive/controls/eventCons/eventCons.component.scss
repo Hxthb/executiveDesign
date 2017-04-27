@@ -1,0 +1,60 @@
+//处理控件整体CSS
+@charset 'utf-8';
+//________左侧列表控件标题________ */
+.LogicUI {
+    width: 160px;
+    margin: 0 10px;
+    list-style: none;
+    li {
+        margin: 10px;
+    }
+}
+
+.data-list-title {
+    min-width: 220px;
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.95);
+    color: #FFF;
+    font-family: "Microsoft Yahei";
+}
+
+.data-list {
+    border: 1px solid;
+    min-width: 110px;
+    min-height: 35px;
+    color: #e8e8e8;
+    background-color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 13px;
+}
+
+//控件中文本框类型统一样式
+.input {
+    display: inline-block;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 2px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+}
+
+//红色边框
+.red-border {
+    border-color: rgba(141, 39, 142, .75);
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    -webkit-box-shadow: 0 0 18px rgba(111, 1, 32, 3);
+}
+
+.white-border {
+    border-color: #03A9F4;
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    -webkit-box-shadow: 0 0 18px rgba(255, 255, 255, 3);
+}

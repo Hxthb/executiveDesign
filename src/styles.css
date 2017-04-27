@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ui-state-highlight:after {
+    content: "放在这里";
+    line-height: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.ui-state-highlight {
+    height: 25px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px dashed red;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.1);
+}

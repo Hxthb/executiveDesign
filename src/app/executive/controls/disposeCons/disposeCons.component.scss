@@ -1,0 +1,206 @@
+//处理控件整体CSS
+@charset 'utf-8';
+button {
+    outline: 0px;
+}
+
+.data-list-title {
+    min-width: 220px;
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.95);
+    color: #FFF;
+    font-family: "Microsoft Yahei";
+}
+
+.Dispose-Content {
+    padding: 0;
+    margin: 0 10px;
+    width: 205px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.draggable {
+    margin-bottom: 5px;
+    border: 1px solid white;
+}
+
+//输入文本样式
+.EnterTextStyle {
+    padding-left: 10px;
+    line-height: 30px;
+    color: #000;
+}
+
+//嵌套组件样式
+.deor {
+    margin: 0px !important;
+    border: 1px solid white;
+}
+
+.Function-row {
+    display: flex;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    min-width: 17em;
+    /*margin-top: 10px;*/
+    .FuncbackgroundColor {
+        background-color: #FF9800;
+    }
+    .Function-content {
+        min-height: 8em;
+        .Foncution-div {
+            display: flex;
+            align-items: center;
+            .Function-span-left {
+                display: block;
+                float: left;
+                line-height: 3em;
+                padding-left: 10px;
+                min-width: 35px;
+            }
+            .paddingright {
+                min-width: 70px;
+            }
+            .Function-span-right {
+                display: block;
+                float: left;
+                line-height: 3em;
+                padding-right: 10px;
+                min-width: 35px;
+            }
+            .Function-data-list {
+                min-width: 100px;
+                margin: 10px 15px 10px 15px;
+                min-height: 30px;
+                background-color: beige;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                font-size: 13px;
+                float: left;
+            }
+            .Function-data-leftarrow {
+                transform: scaleX(-1);
+                width: 0;
+                font-size: 0;
+                padding: 0px;
+                border: solid 17px;
+                border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #F8C301;
+                float: left;
+            }
+            .Function-data-rigtharrow {
+                width: 0;
+                font-size: 0;
+                padding: 0px;
+                border: solid 17px;
+                border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #F8C301;
+                float: left;
+            }
+        }
+        .FoncutionHeigth {
+            /*position: relative;*/
+            min-height: 4em;
+            .Function-drop-div {
+                overflow: hidden;
+                clear: both;
+                background-color: #FFF;
+                min-height: 2em;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.FuncbackgroundColor {
+    background-color: #FF9800;
+}
+
+.Function-content-or {
+    min-height: 14em;
+    .Foncution-div {
+        display: flex;
+        align-items: center;
+        .Function-span-left {
+            display: block;
+            float: left;
+            line-height: 3em;
+            padding-left: 10px;
+            min-width: 35px;
+        }
+        .Function-span-right {
+            display: block;
+            float: left;
+            line-height: 3em;
+            padding-right: 10px;
+            min-width: 35px;
+        }
+        .Function-data-list {
+            min-width: 100px;
+            margin: 10px 15px 10px 15px;
+            min-height: 30px;
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 13px;
+            float: left;
+        }
+    }
+    .Foncution-or {
+        /*position: relative;*/
+        min-height: 8em;
+    }
+    .Function-span-or {
+        display: block;
+        float: left;
+        line-height: 3em;
+        padding-left: 1em;
+    }
+    .Function-drop-div {
+        clear: both;
+        background-color: #FFF;
+        min-height: 2em;
+        margin-left: 15px;
+    }
+}
+
+.inputText {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    background: rgb(187, 138, 65);
+    padding-left: 10px;
+    font-size: 12px;
+    font-family: inherit;
+    .labelName {
+        min-width: 50px;
+        text-align: center;
+    }
+    .ExecuteField {
+        display: inline-block;
+        min-height: 30px;
+        line-height: 30px;
+        min-width: 145px;
+        outline: none;
+        color: #000;
+        background-color: #FFF;
+        margin: 3px 0;
+    }
+}
+
+//红色边框
+.red-border {
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    border-color: rgba(141, 39, 142, .75);
+    -webkit-box-shadow: 0 0 18px rgba(111, 1, 32, 3);
+}
+
+.white-border {
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    border-color: #03A9F4;
+    -webkit-box-shadow: 0 0 18px rgba(255, 255, 255, 3);
+}

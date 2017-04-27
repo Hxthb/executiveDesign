@@ -1,0 +1,107 @@
+//处理控件整体CSS
+@charset 'utf-8';
+//________左侧列表控件标题________ */
+.data-list-title {
+    min-width: 220px;
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.95);
+    color: #FFF;
+    font-family: "Microsoft Yahei";
+}
+
+.varButton {
+    margin: 5%;
+    width: 90%;
+}
+
+.varUl {
+    list-style: none;
+    list-style: none;
+}
+
+.variant-List {
+    width: 120px;
+    margin: 10px auto;
+}
+
+.VariantList {
+    width: 115px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .var-margin {
+        margin: 15px 0 10px 0px;
+    }
+}
+
+.variant-List-itme {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 115px;
+    max-width: 160px;
+    color: white;
+    background-color: #E91E63;
+    border-radius: 25px;
+}
+
+.delBtn {
+    display: none;
+    position: absolute;
+    font-size: 10px;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    border-radius: 50%;
+    background: #237b80;
+    color: #e4e4e4;
+    z-index: 10;
+    top: 0px;
+    right: 0px;
+    transition: height .5s, width .5s;
+}
+
+
+/*--新增自定义变量模态框样式--*/
+
+.AddNewModel,
+.variate-parameter {
+    .modal-content {
+        margin: 10%;
+        height: 70%;
+        .panel-heading {
+            min-height: 30px;
+            min-width: 250px;
+            background-color: rgba(51, 122, 183, 0.79);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .New-variate-parameter-list {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group-btn {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//红色边框
+.red-border {
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    border-color: rgba(141, 39, 142, .75);
+    -webkit-box-shadow: 0 0 18px rgba(111, 1, 32, 3);
+}
+
+.white-border {
+    -webkit-transition: border linear .0.5s, -webkit-box-shadow linear .3s;
+    border-color: #03A9F4;
+    -webkit-box-shadow: 0 0 18px rgba(255, 255, 255, 3);
+}

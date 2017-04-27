@@ -1,0 +1,248 @@
+/*全局css样式*/
+
+@charset "UTF-8";
+@import "../scssLib/_value.scss";
+@import "../scssLib/_mixin.scss";
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Microsoft YaHei", Serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-state-highlight:after {
+    content: "放在这里";
+    line-height: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.ui-state-highlight {
+    height: 25px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px dashed red;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+//去掉IE自带的输入框样式
+::-ms-clear {
+    display: none;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+//默认按钮的样式
+.btn,
+button,
+.btn-default,
+.btn-group>.btn {
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    &:active,
+    &:link,
+    &:focus,
+    &:hover,
+    &:visited {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+//按钮的状态颜色
+.btnSuccess {
+    color: #fff !important;
+    background-color: $COLOR_SUCCESS;
+    &:hover {
+        @include setGradientBg($COLOR_SUCCESS, 135deg);
+    }
+}
+
+.btnDanger {
+    color: #fff !important;
+    background-color: $COLOR_DANGER;
+    &:hover {
+        @include setGradientBg($COLOR_DANGER, 135deg);
+    }
+}
+
+.btnWarn {
+    color: #fff !important;
+    background-color: $COLOR_WARN;
+    &:hover {
+        @include setGradientBg(lighten($COLOR_WARN, 5), 135deg);
+    }
+}
+
+.btnPrimary {
+    color: #fff !important;
+    background-color: $COLOR_PRIMARY;
+    &:hover {
+        @include setGradientBg(lighten($COLOR_PRIMARY, 5), 135deg);
+    }
+}
+
+.btnInfo {
+    color: #fff !important;
+    background-color: $COLOR_INFO;
+    &:hover {
+        @include setGradientBg(lighten($COLOR_INFO, 5), 135deg);
+    }
+}
+
+//禁用模式下的按钮
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    opacity: 0.35;
+    background-color: gray;
+}
+
+//消除dropdown-toggle阴影
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+
+//消除容器的padding
+.container-fluid {
+    padding: 0px;
+}
+
+//全局用到的表示状态的文本颜色值
+//成功
+.colorSuccess {
+    color: $COLOR_SUCCESS;
+}
+
+//危险
+.colorDanger {
+    color: $COLOR_DANGER;
+}
+
+//警告
+.colorWarn {
+    color: $COLOR_WARN;
+}
+
+.colorPrimary {
+    color: $COLOR_PRIMARY;
+}
+
+.colorInfo {
+    color: $COLOR_INFO;
+}
+
+//按钮下拉组覆盖样式
+.dropdown {
+    .dropdown-menu {
+        min-width: 0px;
+        border-radius: 0px;
+    }
+}
+
+//表单控件
+.form-control {
+    outline: none;
+    border-radius: 0px;
+    box-shadow: 0 0 0;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+}
+
+//tooltip样式
+.tooltip.in {
+    opacity: .7;
+    .tooltip-inner {
+        border-radius: 0px;
+    }
+}
+
+.panel {
+    border: none;
+    .panel-primary {
+        border: none;
+    }
+}
+
+//panel样式
+.panel-group {
+    margin: 0px;
+    .panel {
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+//modal相关样式
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            border-radius: 0px;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+            .modal-header {
+                border: none;
+                color: #fff;
+                text-align: center;
+                .close {
+                    color: #fff;
+                    line-height: 1.2;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+//poopver样式
+.popover {
+    border: none;
+    .arrow {
+        border-bottom-color: transparent !important;
+    }
+}
+
+//行样式
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+//dnd样式
+.dnd-drag-start {
+    transform: scale(0.8);
+    opacity: 0.8;
+}
+
+.dnd-drag-over {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+}
+
+.dnd-sortable-drag {
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.7;
+    border: 1px dashed #000;
+}

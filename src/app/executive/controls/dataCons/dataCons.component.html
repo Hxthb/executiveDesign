@@ -1,0 +1,89 @@
+<section class="data-list-title">
+    <header>
+        {{ 'executive.list_data.title' | translate}}
+    </header>
+</section>
+<section>
+    <button type="button" class="btn btn-info varButton" (click)="addNewValue(AddNewModel)">{{ 'executive.list_data.add' | translate}}</button>
+</section>
+<ul class='varUl'>
+    <section class="variant-List" *ngFor="let NewVar of NewVarArray let i = index">
+        <li class="var-margin">
+            <div class="VariantList animated flipInX" (mouseenter)="enter($event,'block')" (mouseleave)="enter($event,'none')">
+                <div class="variant" title="{{ 'executive.list_data.var' | translate}}">
+                    <div class="variant-List-itme" (click)='parameter(i,variateParameter)' title="{{ 'executive.list_data.var' | translate}}">
+                        <article [title]="NewVar['VarDefault']">{{NewVar.VarName}}</article>
+                    </div>
+                </div>
+                <button (click)="dropDelete(i)" class="btn delBtn iconfont icon-cn-shanchu animated flipInX"></button>
+            </div>
+        </li>
+    </section>
+</ul>
+<section class="AddNewModel modal animated zoomIn" role="dialog" #AddNewModel>
+    <form class="modal-dialog">
+        <section class="modal-content">
+            <section>
+                <header class="panel-heading">
+                    <span>{{ 'executive.list_data.add' | translate}}</span>
+                </header>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vName' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vName' | translate}}" name="Var" #Var>
+                </section>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vState' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vState' | translate}}" name="VarState" #VarState>
+                </section>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vDefal' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vDefal' | translate}}" name="VarDefault" #VarDefault>
+                </section>
+            </section>
+            <section class="form-group-btn">
+                <button type="button" class="btn btn-info" (click)="addNewVarPar(Var.value,VarState.value,VarDefault.value)">{{ 'executive.list_data.confirm' | translate}}</button>
+                <button type="button" class="btn btn-info" (click)="hideNewValue(AddNewModel)" style="margin-left: 15px;">{{ 'executive.list_data.return' | translate}}</button>
+            </section>
+        </section>
+    </form>
+</section>
+
+<section class="variate-parameter animated fadeInDown modal" role="dialog" #variateParameter>
+    <form class="modal-dialog">
+        <section class="modal-content">
+            <section>
+                <header class="panel-heading">
+                    <span>{{ 'executive.list_data.add' | translate}}</span>
+                </header>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vName' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vName' | translate}}" [(ngModel)]="varNameParameter" name="defaultVariate">
+                </section>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vState' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vState' | translate}}" [(ngModel)]="varStateParameter" name="varStateParameter">
+                </section>
+            </section>
+            <section class="form-group New-variate-parameter-list">
+                <label for="firstname" class="col-xs-3 col-xs-offset-1 control-label">{{ 'executive.list_data.vDefal' | translate}}</label>
+                <section class="col-xs-8">
+                    <input type="text" class="form-control" placeholder="{{ 'executive.list_data.vDefal' | translate}}" [(ngModel)]="varDefaultParameter" name="varDefaultParameter">
+                </section>
+            </section>
+            <section class="form-group-btn">
+                <button type="button" class="btn btn-info" (click)="alterVarPar(varIndex,varNameParameter,varStateParameter,varDefaultParameter,variateParameter)">{{ 'executive.list_data.confirm' | translate}}</button>
+                <button type="button" class="btn btn-info" (click)="hideVarPar(variateParameter)" style="margin-left: 15px;">{{ 'executive.list_data.return' | translate}}</button>
+            </section>
+        </section>
+    </form>
+</section>

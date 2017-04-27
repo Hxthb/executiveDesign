@@ -1,0 +1,61 @@
+<header>
+    <nav class="navbar navbar-fixed-top cyNav">
+        <section class="container-fluid rdNavContainer">
+            <section class="navbar-header rdNavHeader">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#options">
+                    <span class="iconfont icon-caidan"></span>
+                </button>
+                <p class="navbar-brand visible-xs-block">{{headerTitle}}</p>
+            </section>
+
+            <section rm-collapse pix="768" class="collapse navbar-collapse row rdOptions" id="options">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown ">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="iconfont icon-yuyan"></span>
+								<span>语言</span>
+							</button>
+                        <ul class="dropdown-menu animated bounceIn">
+                            <li class="transLi">
+                                <a (click)="langService.langZH_CH()">简体中文</a>
+                                <a (click)="langService.langZH_TW()">繁体中文</a>
+                                <a (click)="langService.langEN_US()">英文</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="iconfont icon-zhuti"></span>
+								<span>主题</span>
+							</button>
+                        <ul class="dropdown-menu animated bounceIn">
+                            <li class="themeLi">
+                                <a (click)="themeService.themeBlue()">蓝色调</a>
+                                <a (click)="themeService.themeGreen()">绿色调</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <section class="rdTitle hidden-xs col-xs-4 col-xs-offset-4">
+                    <p class="navbar-text">{{headerTitle}}</p>
+                </section>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="iconfont icon-yonghu"></span>
+                            <span>用户</span>
+						</button>
+                        <ul class="dropdown-menu dropdown-menu-right animated bounceIn">
+                            <li class="userLi">
+                                <a>个人信息</a>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </nav>
+</header>

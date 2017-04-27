@@ -1,0 +1,236 @@
+@charset "UTF-8";
+@import "../../../assets/scssLib/_mixin.scss";
+@import "../../../assets/scssLib/_value.scss";
+//________全局标签CSS控制_________ */
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+//全局滚动条
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+//________全局标签CSS控制end_________ */
+//________当前左浮动样式________ */
+.LeftBloak {
+    float: left;
+}
+
+//________当前内容样式________ */
+.containers {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../assets/images/pcbg_blue_g.jpg);
+    /*background: #FFF url(../../../../assets/images/pcbg_blue_g.jpg);*/
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.ContentBody {
+    margin: 10px 5%;
+    border: 5px double #a9a9bb;
+    .panel-heading {
+        background-color: rgb(57, 115, 173);
+        button {
+            margin-left: 10px;
+        }
+    }
+    //________执行体绑定后显示内容区________ */
+    .rule-body {
+        width: 100%;
+        height: 600px;
+        background-color: #f6f6f6;
+        margin: 0;
+        padding: 0;
+        .ExecuteHeader {
+            text-align: center;
+            height: 5%;
+            padding: 10px 15px;
+            border-right: 1px dashed rgba(35, 101, 169, 0.39);
+            border-bottom: 1px solid rgba(35, 101, 169, 0.39);
+            color: #000;
+        }
+        .Listtitle {
+            background-color: #4CAF50;
+            width: 24%;
+            float: left;
+        }
+        .placetitle {
+            background-color: #8BC34A;
+            width: 76%;
+            float: left;
+        }
+        .left-key-nav {
+            height: 93%;
+            width: 4%;
+            background: rgba(35, 101, 169, 0.72);
+            color: #FFF;
+            font-size: 18px;
+            font-family: "Microsoft Yahei";
+            .left-menu-list .left-menu-selected {
+                background: #009DD9;
+                width: 100%
+            }
+            //________左侧列表内容内部样式________ */
+            .left-menu-list {
+                margin: 0;
+                list-style: none;
+                li {
+                    width: 100%;
+                    height: 139px;
+                    padding: 20px 9px;
+                    text-align: center;
+                    border-bottom: 1px solid #FFF;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        //________左侧列表控件________ */
+        .page-manage-wrap {
+            position: relative;
+            height: 93%;
+            width: 20%;
+            background: #FFF;
+            border-right: 1px dashed #a3bdd8;
+            border-bottom: 1px solid #CCC;
+            font-family: "Microsoft Yahei";
+            .ctrl-lib-wrap {
+                height: 100%;
+                left: 0;
+                top: 0;
+                width: 100%;
+                overflow: auto;
+                li {
+                    margin: 15px 0 10px 10px;
+                }
+                //________左侧列表控件标题________ */
+                .data-list-title {
+                    padding: 10px;
+                    background-color: rgba(95, 158, 160, 0.95);
+                    color: #FFF;
+                    font-family: "Microsoft Yahei";
+                }
+            }
+        }
+        //________右侧拖拽区样式________ */
+        .droppable-page {
+            width: 76%;
+            height: 93%;
+            background-color: white;
+            overflow: auto;
+            .droppable {
+                margin-left: 2%;
+                height: 96%;
+                min-width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.highlight:after {
+    content: "放在这里";
+    line-height: 25px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    background: #000;
+    height: 100px;
+    width: 100px;
+    color: #000
+}
+
+
+/*--新增自定义变量模态框样式--*/
+
+.AddNewModel,
+.variate-parameter {
+    .modal-content {
+        margin: 10%;
+        height: 70%;
+        .panel-heading {
+            min-height: 30px;
+            min-width: 250px;
+            background-color: rgba(51, 122, 183, 0.79);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .New-variate-parameter-list {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group-btn {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/*--帮助文档模态框样式--*/
+
+.HelpDocument {
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    .left-key-nav {
+        height: 93%;
+        width: 4%;
+        background: rgba(35, 101, 169, 0.72);
+        color: #FFF;
+        font-size: 18px;
+        font-family: "Microsoft Yahei";
+        .left-menu-list .left-menu-selected {
+            background: #009DD9;
+            width: 100%
+        }
+        .left-menu-list {
+            margin: 0;
+            list-style: none;
+            li {
+                width: 100%;
+                height: 139px;
+                padding: 25px 9px;
+                text-align: center;
+                border-bottom: 1px solid #FFF;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.showJson,
+.inputJson {
+    top: 60px;
+    .modal-header {
+        background: #3e515b !important;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .modal-body {
+        max-height: 500px;
+        overflow-x: auto;
+    }
+}
+
+.showJson {
+    pre {
+        border: 1px dashed #e0e0e0;
+        border-radius: 0;
+        background: #f3f3f3;
+        color: #62564d;
+        font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    }
+}

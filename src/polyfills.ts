@@ -18,6 +18,30 @@ import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
+//第三方引用
+// RxJS
+// import 'rxjs';
+import 'rxjs/add/observable/throw'
+import 'rxjs/add/observable/fromEvent'
+import 'rxjs/add/observable/of'
+import 'rxjs/add/operator/do'
+import 'rxjs/add/operator/delay'
+import 'rxjs/add/operator/catch'
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/toPromise'
+import 'rxjs/add/operator/timeout'
+import 'rxjs/add/operator/distinctUntilChanged'
+import 'rxjs/Subscription'
+
+//bootstrap
+// import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import '../node_modules/animate.css/animate.min.css'
+// import '../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css'
+// import '../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.min.js'
+
+// import '../node_modules/dragula/dist/dragula.min.css'
+
 // If you need to support the browsers/features below, uncomment the import
 // and run `npm install import-name-here';
 // Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
