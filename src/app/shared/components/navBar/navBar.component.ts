@@ -3,7 +3,6 @@ import { Component,EventEmitter,Input,OnInit,Output} from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 
 import { ChangeLangService } from '../../../core/services/change-lang.service'
-import { ThemeService } from '../../../core/services/theme.service'
 
 // import './navBar.component.scss'
 
@@ -18,8 +17,7 @@ export class NavBarComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        public langService: ChangeLangService,
-        private themeService:ThemeService) {
+        public langService: ChangeLangService) {
              //设置多语言，默认显示中文
             this.langService.autoLang()
          }

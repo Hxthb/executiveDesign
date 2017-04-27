@@ -116,7 +116,6 @@ export class ExecutiveService{
                         alert('程序出错,错误原因' + err.description)
                     }                            
                 },
-
           })
           createEventDrop($(".Function-data-list", $obj));
          }

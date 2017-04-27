@@ -4,7 +4,6 @@ import { Title } from '@angular/platform-browser'
 import { ChangeLangService } from './services/change-lang.service'
 import { SaveDataService } from './services/save-data.service'
 import { HttpService } from './services/http.service'
-import { ThemeService } from './services/theme.service'
 
 @NgModule({
     providers:[
@@ -12,7 +11,6 @@ import { ThemeService } from './services/theme.service'
         ChangeLangService,
         SaveDataService,
         HttpService,
-        ThemeService
     ]
 })
 export class CoreModule{

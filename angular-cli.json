@@ -20,6 +20,9 @@
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
             "../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
+            "./assets/styles/iconfont.css",
+            "./assets/styles/global.scss",
+            "../node_modules/animate.css/animate.min.css",
             "styles.css"
         ],
         "scripts": [
@@ -28,6 +31,7 @@
             "../node_modules/bootstrap/dist/js/bootstrap.min.js",
             "../node_modules/moment/min/moment.min.js",
             "../node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"
+
         ],
         "environments": {
             "source": "environments/environment.ts",
